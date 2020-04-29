@@ -14,23 +14,38 @@
     </ion-toolbar>
   </ion-header> -->
 
-  <ion-title size="large">{{data?.location}}</ion-title>
-  <ion-grid>
-    <ion-row>
-      <ion-col size="6">
-        <h4>{{data?.confirmed}}</h4>
-        <p>Confirmed</p>
-      </ion-col>
-      <ion-col size="6">
-        <h4>{{data?.deaths}}</h4>
-        <p>Deaths</p>
-      </ion-col>
-      <ion-col size="12">
-        <h4>{{data?.recovered}}</h4>
-        <p>Recovered</p>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+  
+  <ion-card>
+    <ion-card-header>
+      <!-- <ion-card-subtitle>Card Subtitle</ion-card-subtitle> -->
+      <ion-card-title class="ion-text-center">{{data?.location}}</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card>
+   
+  
+    <ion-card-content>
+      <ion-grid>
+        <ion-row >
+          <ion-col size="6" class="ion-text-center">
+            <h2>{{data?.confirmed}}</h2>
+            <p>Confirmed</p>
+          </ion-col>
+          <ion-col size="6" class="ion-text-center">
+            <h2>{{data?.deaths}}</h2>
+            <p>Deaths</p>
+          </ion-col>
+          <ion-col size="12" class="ion-text-center">
+            <h2>{{data?.recovered}}</h2>
+            <p>Recovered</p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+  
+  
 
 
   <!-- <app-explore-container name="Tab 1 page"></app-explore-container> -->
