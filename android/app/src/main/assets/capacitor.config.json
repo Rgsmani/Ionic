@@ -1,0 +1,8 @@
+{
+  "appId": "io.ionic.starter",
+  "appName": "Sathya Covid-19 Tracker",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "cordova": {}
+}

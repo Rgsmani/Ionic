@@ -1,5 +1,9 @@
 {
   "name": "covid-19 tracker",
-  "integrations": {},
-  "type": "angular"
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular",
+  "id": "78e715ef"
 }
