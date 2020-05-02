@@ -1,0 +1,167 @@
+<ion-header>
+  <ion-toolbar color="light">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab1"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ pageTitle }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <img src="../../assets/Corono_images/img9.jpg" *ngIf="!showLoading" />
+  <ion-card *ngIf="!showLoading">
+    <ion-card-content class="custom-card-content" >
+      <ion-grid>
+        <ion-row>
+          <ion-col size="12" class="ion-text-center">
+            <ion-card-title class="ion-text-center custom-card-title"
+              >{{ pageTitle }}</ion-card-title
+            >
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="6" class="ion-text-center">
+            <h2 class="data-text">{{searchData?.confirmed}}</h2>
+            <p class="data-title">Confirmed</p>
+          </ion-col>
+          <ion-col size="6" class="ion-text-center">
+            <h2 class="data-text">{{searchData?.deaths}}</h2>
+            <p class="data-title">Deaths</p>
+          </ion-col>
+          <ion-col size="12" class="ion-text-center">
+            <h2 class="data-text">{{searchData?.recovered}}</h2>
+            <p class="data-title">Recovered</p>
+          </ion-col>
+        </ion-row>
+
+        <ion-row *ngIf="searchBy === 'state'">
+          <ion-col size="12" class="ion-text-center">
+
+            <ion-button color="primary" (click)="openSearchList('district')">
+              <ion-label>
+                View By District
+              </ion-label>
+
+              <ion-icon name="chevron-forward" slot="end"></ion-icon
+            ></ion-button>
+
+
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+
+
+  <ion-item *ngIf="showLoading" >
+      
+    <ion-label>
+      <h3>
+        <ion-skeleton-text animated style="width: 50%;"></ion-skeleton-text>
+      </h3>
+      <p>
+        <ion-skeleton-text animated style="width: 80%;"></ion-skeleton-text>
+      </p>
+      <p>
+        <ion-skeleton-text animated style="width: 60%;"></ion-skeleton-text>
+      </p>
+      <p>
+        <ion-skeleton-text animated style="width: 90%;"></ion-skeleton-text>
+      </p>
+      <p>
+        <ion-skeleton-text animated style="width: 50%;"></ion-skeleton-text>
+      </p>
+      <p>
+        <ion-skeleton-text animated style="width: 60%;"></ion-skeleton-text>
+      </p>
+      <p>
+        <ion-skeleton-text animated style="width: 40%;"></ion-skeleton-text>
+      </p>
+    </ion-label>
+  </ion-item>
+  
+  <ion-item *ngIf="showLoading" >
+      
+    <ion-label>
+      <h3>
+        <ion-skeleton-text animated style="width: 50%;"></ion-skeleton-text>
+      </h3>
+      <p>
+        <ion-skeleton-text animated style="width: 80%;"></ion-skeleton-text>
+      </p>
+      <p>
+        <ion-skeleton-text animated style="width: 60%;"></ion-skeleton-text>
+      </p>
+      <p>
+        <ion-skeleton-text animated style="width: 90%;"></ion-skeleton-text>
+      </p>
+      <p>
+        <ion-skeleton-text animated style="width: 50%;"></ion-skeleton-text>
+      </p>
+      <p>
+        <ion-skeleton-text animated style="width: 60%;"></ion-skeleton-text>
+      </p>
+      <p>
+        <ion-skeleton-text animated style="width: 40%;"></ion-skeleton-text>
+      </p>
+    </ion-label>
+  </ion-item>
+  
+  <ion-item *ngIf="showLoading" >
+      
+    <ion-label>
+      <h3>
+        <ion-skeleton-text animated style="width: 50%;"></ion-skeleton-text>
+      </h3>
+      <p>
+        <ion-skeleton-text animated style="width: 80%;"></ion-skeleton-text>
+      </p>
+      <p>
+        <ion-skeleton-text animated style="width: 60%;"></ion-skeleton-text>
+      </p>
+      <p>
+        <ion-skeleton-text animated style="width: 90%;"></ion-skeleton-text>
+      </p>
+      <p>
+        <ion-skeleton-text animated style="width: 50%;"></ion-skeleton-text>
+      </p>
+      <p>
+        <ion-skeleton-text animated style="width: 60%;"></ion-skeleton-text>
+      </p>
+      <p>
+        <ion-skeleton-text animated style="width: 40%;"></ion-skeleton-text>
+      </p>
+    </ion-label>
+  </ion-item>
+  
+  <ion-item *ngIf="showLoading" >
+      
+    <ion-label>
+      <h3>
+        <ion-skeleton-text animated style="width: 50%;"></ion-skeleton-text>
+      </h3>
+      <p>
+        <ion-skeleton-text animated style="width: 80%;"></ion-skeleton-text>
+      </p>
+      <p>
+        <ion-skeleton-text animated style="width: 60%;"></ion-skeleton-text>
+      </p>
+      <p>
+        <ion-skeleton-text animated style="width: 90%;"></ion-skeleton-text>
+      </p>
+      <p>
+        <ion-skeleton-text animated style="width: 50%;"></ion-skeleton-text>
+      </p>
+      <p>
+        <ion-skeleton-text animated style="width: 60%;"></ion-skeleton-text>
+      </p>
+      <p>
+        <ion-skeleton-text animated style="width: 40%;"></ion-skeleton-text>
+      </p>
+    </ion-label>
+  </ion-item>
+
+
+
+
+</ion-content>

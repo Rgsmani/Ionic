@@ -4,8 +4,20 @@ import { Tab1Page } from './tab1.page';
 
 const routes: Routes = [
   {
-    path: '',
-    component: Tab1Page,
+    path: '',   
+    children: [
+      {
+        path: '',
+        component: Tab1Page,
+      },
+      {
+        path: ':searchBy',
+        loadChildren: () =>
+          import('../search-list/search-list.module').then(
+            (m) => m.SearchListPageModule
+          ),
+      },
+    ],
   }
 ];
 

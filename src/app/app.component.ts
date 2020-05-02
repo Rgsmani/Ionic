@@ -1,9 +1,10 @@
 import { Component, OnInit } from "@angular/core";
 
-import { Platform } from "@ionic/angular";
+import { Platform, MenuController } from "@ionic/angular";
 import { SplashScreen } from "@ionic-native/splash-screen/ngx";
 import { StatusBar } from "@ionic-native/status-bar/ngx";
 import { CoreServiceService } from "./services/core-service.service";
+import { Router, NavigationExtras, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: "app-root",
@@ -15,7 +16,10 @@ export class AppComponent implements OnInit {
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
-    private coreService: CoreServiceService
+    private coreService: CoreServiceService,
+    private menu: MenuController,
+    private router: Router,
+    private activatedRoute: ActivatedRoute
   ) {
     this.initializeApp();
   }
@@ -36,4 +40,32 @@ export class AppComponent implements OnInit {
     //   console.log('data', data);
     // });
   }
+
+  openFirst() {
+    this.menu.enable(true, 'first');
+    this.menu.open('first');
+  }
+
+  navigateLink(navigateTo) {
+    this.router.navigate([navigateTo]);
+    this.menu.close('first');
+  }
+
+  openSearchList(searchBy) {
+    const searchName = searchBy !== 'country' ? searchBy === 'state' ? 'India' : 'Tamil Nadu' : 'Global';
+    const navigationExtras: NavigationExtras = {
+      queryParams: {
+        searchName,
+        searchBy
+      },
+      relativeTo: this.activatedRoute
+    };
+    this.router.navigate(['./tabs/tab1/', searchBy], navigationExtras);
+    this.menu.close('first');
+  }
+
+  // openCustom() {
+  //   this.menu.enable(true, 'custom');
+  //   this.menu.open('custom');
+  // }
 }

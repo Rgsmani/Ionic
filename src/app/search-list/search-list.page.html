@@ -1,0 +1,148 @@
+<ion-header>
+  <ion-toolbar color="light">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab1"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ pageTitle }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content>
+  <ion-list >
+    <ion-item
+      *ngFor="let searchName of searchList"
+      button
+      (click)="openSearchDetail(searchName)"     
+      lines="full"
+     
+    >
+      <ion-label>
+        {{ searchName }}
+      </ion-label>
+    </ion-item>
+
+    <ion-item *ngIf="showLoading" >
+      
+      <ion-label>
+        <h3>
+          <ion-skeleton-text animated style="width: 50%;"></ion-skeleton-text>
+        </h3>
+        <p>
+          <ion-skeleton-text animated style="width: 80%;"></ion-skeleton-text>
+        </p>
+       
+      </ion-label>
+    </ion-item>
+    <ion-item *ngIf="showLoading" >
+      
+      <ion-label>
+        <h3>
+          <ion-skeleton-text animated style="width: 50%;"></ion-skeleton-text>
+        </h3>
+        <p>
+          <ion-skeleton-text animated style="width: 80%;"></ion-skeleton-text>
+        </p>
+       
+      </ion-label>
+    </ion-item>
+    <ion-item *ngIf="showLoading" >
+      
+      <ion-label>
+        <h3>
+          <ion-skeleton-text animated style="width: 50%;"></ion-skeleton-text>
+        </h3>
+        <p>
+          <ion-skeleton-text animated style="width: 80%;"></ion-skeleton-text>
+        </p>
+       
+      </ion-label>
+    </ion-item>
+    <ion-item *ngIf="showLoading" >
+      
+      <ion-label>
+        <h3>
+          <ion-skeleton-text animated style="width: 50%;"></ion-skeleton-text>
+        </h3>
+        <p>
+          <ion-skeleton-text animated style="width: 80%;"></ion-skeleton-text>
+        </p>
+       
+      </ion-label>
+    </ion-item>
+    <ion-item *ngIf="showLoading" >
+      
+      <ion-label>
+        <h3>
+          <ion-skeleton-text animated style="width: 50%;"></ion-skeleton-text>
+        </h3>
+        <p>
+          <ion-skeleton-text animated style="width: 80%;"></ion-skeleton-text>
+        </p>
+       
+      </ion-label>
+    </ion-item>
+    <ion-item *ngIf="showLoading" >
+      
+      <ion-label>
+        <h3>
+          <ion-skeleton-text animated style="width: 50%;"></ion-skeleton-text>
+        </h3>
+        <p>
+          <ion-skeleton-text animated style="width: 80%;"></ion-skeleton-text>
+        </p>
+       
+      </ion-label>
+    </ion-item>
+    <ion-item *ngIf="showLoading" >
+      
+      <ion-label>
+        <h3>
+          <ion-skeleton-text animated style="width: 50%;"></ion-skeleton-text>
+        </h3>
+        <p>
+          <ion-skeleton-text animated style="width: 80%;"></ion-skeleton-text>
+        </p>
+       
+      </ion-label>
+    </ion-item>
+    <ion-item *ngIf="showLoading" >
+      
+      <ion-label>
+        <h3>
+          <ion-skeleton-text animated style="width: 50%;"></ion-skeleton-text>
+        </h3>
+        <p>
+          <ion-skeleton-text animated style="width: 80%;"></ion-skeleton-text>
+        </p>
+       
+      </ion-label>
+    </ion-item>
+    <ion-item *ngIf="showLoading" >
+      
+      <ion-label>
+        <h3>
+          <ion-skeleton-text animated style="width: 50%;"></ion-skeleton-text>
+        </h3>
+        <p>
+          <ion-skeleton-text animated style="width: 80%;"></ion-skeleton-text>
+        </p>
+       
+      </ion-label>
+    </ion-item>
+    <ion-item *ngIf="showLoading" >
+      
+      <ion-label>
+        <h3>
+          <ion-skeleton-text animated style="width: 50%;"></ion-skeleton-text>
+        </h3>
+        <p>
+          <ion-skeleton-text animated style="width: 80%;"></ion-skeleton-text>
+        </p>
+       
+      </ion-label>
+    </ion-item>
+
+  </ion-list>
+</ion-content>

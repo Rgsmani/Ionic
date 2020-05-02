@@ -1,17 +1,68 @@
 <ion-header [translucent]="true">
-  <ion-toolbar color="primary">
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start" (click)="openMenu()">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+
     <ion-title>
-      Tab 3
+      App Info
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" >
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true">
+  <ion-row>
+    <ion-col size="12" class="ion-text-center">
+      <img class="profile-img" src="../../assets/Profile_img.jpeg" />
+      <h2 class="profile-name">Manikandan R</h2>
+      <h3 class="profile-desc">App Developer</h3>
+      <h3 class="profile-desc">v 1.0.0</h3>
+     
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+      <ion-card class="custom-card">
+        <ion-card-content class="custom-card-content">
+          <div class="tech-section">
+            <h1>Technologies Used</h1>
+            <p>Javascript, Angular 9, Ionic 4, Typescript, HTML and CSS</p>
+          </div>
+          <div class="tech-section">
+            <h1>APIs Used</h1>
+            <p>RapidAPI.com</p>
+          </div>
+        </ion-card-content>
+      </ion-card>
+
+ 
+
+     
+    </ion-col>
+  </ion-row>
+
+  <ion-fab vertical="top" horizontal="end" slot="fixed" color="tertiary">
+    <ion-fab-button>
+      <ion-icon name="person-outline"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="bottom">
+      <ion-fab-button
+        (click)="openProfileLink('https://www.facebook.com/rgsmanikandan')"
+        ><ion-icon name="logo-facebook"></ion-icon
+      ></ion-fab-button>
+
+      <ion-fab-button
+        (click)="openProfileLink('https://www.instagram.com/rgsmanikandan/')"
+        ><ion-icon name="logo-instagram"></ion-icon
+      ></ion-fab-button>
+
+      <ion-fab-button
+        (click)="openProfileLink('https://www.linkedin.com/in/rgsmanikandan/')"
+        ><ion-icon name="logo-linkedin"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" color="tertiary">
+    <ion-fab-button (click)="shareApp()">
+      <ion-icon name="share-social-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>
