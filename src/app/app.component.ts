@@ -32,13 +32,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    // this.coreService.getDataByCountry().subscribe((data) => {
-    //   console.log('data', data);
-    // });
-
-    // this.coreService.getCountryWiseList().subscribe((data) => {
-    //   console.log('data', data);
-    // });
+  
   }
 
   openFirst() {
@@ -64,8 +58,5 @@ export class AppComponent implements OnInit {
     this.menu.close('first');
   }
 
-  // openCustom() {
-  //   this.menu.enable(true, 'custom');
-  //   this.menu.open('custom');
-  // }
+ 
 }

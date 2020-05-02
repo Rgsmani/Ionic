@@ -27,7 +27,7 @@ export class Tab1Page implements OnInit {
     this.coreService.getDataByCountry().subscribe((res) => {
       this.globalData = res.data;
       this.showLoading = false;
-      console.log('globalData', res);
+     
     });
    
 
@@ -35,16 +35,16 @@ export class Tab1Page implements OnInit {
       const data = res.data.covid19Stats;
       this.countryDataList = [...new Set(data.map((x) => x.country))];
       this.showLoading = false;
-      console.log('countryList', this.countryDataList);
+     
     });
 
     
 
-    // this.coreService.getIndiaData().subscribe((data) => {
-    //   this.indiaData = data;
-    //   this.tamilNaduData = data.state_wise['Tamil Nadu'];
-    //   this.chennaiData = data.state_wise['Tamil Nadu'].district.Chennai;
-    // });
+    this.coreService.getIndiaData().subscribe((data) => {
+      this.indiaData = data;
+      this.tamilNaduData = data.state_wise['Tamil Nadu'];
+      this.chennaiData = data.state_wise['Tamil Nadu'].district.Chennai;
+    });
   }
 
   openSearchList(searchBy) {

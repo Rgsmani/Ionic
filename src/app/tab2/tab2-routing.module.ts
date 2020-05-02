@@ -9,14 +9,7 @@ const routes: Routes = [
       {
         path: '',
         component: Tab2Page,
-      },
-      {
-        path: ':countryName',
-        loadChildren: () =>
-          import('./country-detail/country-detail.module').then(
-            (m) => m.CountryDetailPageModule
-          ),
-      },
+      }    
     ],
   },
 ];

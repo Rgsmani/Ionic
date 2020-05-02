@@ -27,7 +27,7 @@ export class SearchListPage implements OnInit {
       this.searchBy = paramMap.searchBy;
       this.searchName = paramMap.searchName;
      
-      console.log('searchBy', this.searchBy);
+     
       this.getSearchList(this.searchBy);
     });
   }
@@ -40,7 +40,7 @@ export class SearchListPage implements OnInit {
         this.showLoading = false;
         this.searchList = [...new Set(data.map((x) => x.country))];
 
-        console.log('searchList', this.searchList);
+       
       });
     } else if (searchBy === 'state') {
       this.pageTitle = this.searchName;
